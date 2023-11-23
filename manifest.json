@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Cat Extension",
+    "description": "Cat runs to your mouseclick",
+    "version": "1.0",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        "images/*"
+    ]
+}
